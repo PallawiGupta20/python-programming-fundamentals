@@ -1,0 +1,7 @@
+s = "  Hello World  "
+s.strip()        # "Hello World" - removes leading/trailing whitespace
+s.lower()         # "  hello world  "
+s.split()         # ['Hello', 'World']
+s.replace("World", "Python")  # "  Hello Python  "
+"-".join(["a","b","c"])       # "a-b-c"
+s.startswith("  H")           # True

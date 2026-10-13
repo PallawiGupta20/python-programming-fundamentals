@@ -1,0 +1,23 @@
+# Solution
+class TestUtils:
+    def __init__(self, count):
+        self.count = count
+
+    def run(self):
+        self.count += 1
+        print(f"Tests run: {self.count}")
+
+    @classmethod
+    def create_default(cls):
+        return cls(count=0)
+
+    @staticmethod
+    def format_duration(seconds):
+        minutes = seconds // 60
+        secs = seconds % 60
+        return f"{minutes}m {secs}s"
+
+tu = TestUtils.create_default()
+tu.run()
+tu.run()
+print(TestUtils.format_duration(125))   # 2m 5s

@@ -1,0 +1,27 @@
+def validate_email(email):
+
+    # Must contain exactly one @
+    if email.count("@") != 1:
+        return False
+
+    # Split email around @
+    username, domain = email.split("@")
+
+    # Username cannot be empty
+    if username == "":
+        return False
+
+    # Domain must contain .
+    if "." not in domain:
+        return False
+
+    # Dot should not be the first or last character of domain
+    if domain.startswith(".") or domain.endswith("."):
+        return False
+
+    return True
+
+
+print(validate_email("test@gmail.com"))
+print(validate_email("test@gmail"))
+print(validate_email("test@@gmail.com"))

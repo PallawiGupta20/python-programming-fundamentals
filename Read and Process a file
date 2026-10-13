@@ -1,0 +1,9 @@
+def total_price(filename):
+    total = 0
+    with open(filename, "r") as file:
+        for line in file:
+            name, price = line.strip().split(",")
+            total += float(price)
+    return total
+
+print(f"Total: ${total_price('products.txt'):.2f}")  # Total: $105.96

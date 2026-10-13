@@ -1,0 +1,4 @@
+Backpack,29.99
+Bike Light,9.99
+T-Shirt,15.99
+Fleece Jacket,49.99

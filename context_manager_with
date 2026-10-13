@@ -1,0 +1,13 @@
+# Solution
+class TestSession:
+    def __enter__(self):
+        print("Session started")
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        print("Session closed")
+        return False   # don't suppress exceptions
+
+with TestSession():
+    print("Running test steps...")
+    # even if this line raised an error, "Session closed" would still print

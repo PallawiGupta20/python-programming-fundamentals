@@ -1,0 +1,9 @@
+def merge_dicts(a, b):
+    merged = a.copy()
+    for key, value in b.items():
+        merged[key] = merged.get(key, 0) + value
+    return merged
+
+a = {"apple": 3, "banana": 5}
+b = {"banana": 2, "cherry": 7}
+print(merge_dicts(a, b))  # {'apple': 3, 'banana': 7, 'cherry': 7}

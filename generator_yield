@@ -1,0 +1,12 @@
+# Solution
+def error_lines(lines):
+    for line in lines:
+        if "ERROR" in line:
+            yield line
+
+logs = ["INFO: started", "ERROR: crash on login", "INFO: passed", "ERROR: timeout"]
+
+for err in error_lines(logs):
+    print(err)
+# ERROR: crash on login
+# ERROR: timeout

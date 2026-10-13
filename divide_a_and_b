@@ -1,0 +1,15 @@
+# Solution
+def safe_divide(a, b):
+    try:
+        result = a / b
+        print(f"Result: {result}")
+    except ZeroDivisionError:
+        print("Cannot divide by zero")
+    except TypeError:
+        print("Invalid input type")
+    finally:
+        print("Operation attempted")
+
+safe_divide(10, 0)     # Cannot divide by zero / Operation attempted
+safe_divide(10, "a")   # Invalid input type / Operation attempted
+safe_divide(10, 2)     # Result: 5.0 / Operation attempted

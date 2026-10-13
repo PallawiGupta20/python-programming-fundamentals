@@ -1,0 +1,14 @@
+def is_palindrome(s):
+    # Convert to lowercase and remove spaces
+    s = s.replace(" ", "").lower()
+
+    # Reverse the string
+    reversed_string = s[::-1]
+
+    # Compare original with reversed
+    return s == reversed_string
+
+
+print(is_palindrome("madam"))
+print(is_palindrome("A man a plan a canal Panama"))
+print(is_palindrome("hello"))

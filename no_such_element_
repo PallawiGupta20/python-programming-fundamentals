@@ -1,0 +1,11 @@
+from selenium.common.exceptions import NoSuchElementException, TimeoutException
+
+try:
+    element = driver.find_element("id", "submit")
+    element.click()
+except NoSuchElementException:
+    print("Element not found — logging failure")
+except TimeoutException:
+    print("Timed out waiting for element")
+finally:
+    driver.save_screenshot("failure.png")

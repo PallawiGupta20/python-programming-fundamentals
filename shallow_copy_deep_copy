@@ -1,0 +1,14 @@
+# Solution
+import copy
+
+base_data = {"user": "test1", "roles": ["admin", "viewer"]}
+
+shallow = copy.copy(base_data)
+deep = copy.deepcopy(base_data)
+
+shallow["roles"].append("editor")   # affects base_data too!
+print(base_data["roles"])           # ['admin', 'viewer', 'editor']
+
+deep["roles"].append("guest")       # does NOT affect base_data
+print(base_data["roles"])           # still ['admin', 'viewer', 'editor']
+print(deep["roles"])                # ['admin', 'viewer', 'editor', 'guest']

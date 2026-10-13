@@ -1,0 +1,10 @@
+# Solution
+executed = ["TC1", "TC2", "TC2", "TC3", "TC1"]
+unique_ids = set(executed)              # {'TC1', 'TC2', 'TC3'}
+print(unique_ids)
+
+tc_result = ("TC1", "PASS")             # tuple — immutable pairing
+print(tc_result[0], tc_result[1])
+
+locators = {"username": "//input[@id='user']", "password": "//input[@id='pwd']"}
+print(locators["username"])

@@ -1,0 +1,15 @@
+def remove_duplicates(items):
+    seen = []
+    result = []
+
+    for item in items:
+        if item not in seen:
+            seen.append(item)
+            result.append(item)
+
+    return result
+
+
+numbers = [1, 2, 2, 3, 1, 4, 3]
+
+print(remove_duplicates(numbers))
